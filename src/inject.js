@@ -2,13 +2,14 @@
 (function () {
     "use strict";
   
-    const originalUserAgent = window.navigator.userAgent; //this part of the function replaces the original user string with a fake user string
-    const fakeUserAgent = originalUserAgent.replace(
+    //const originalUserAgent = window.navigator.userAgent; //this part of the function replaces the original user string with a fake user string
+    //const fakeUserAgent = originalUserAgent.replace(
       /\(.*?(?=(; rv:[^\)]+)?\))/,
-      "(Windows NT 12.0; Win64; x64"
-    );
-    const fakeVersion = fakeUserAgent.substring(8);
-  
+      "(Windows NT 10.0; Win64; x64"
+    //);
+    const fakeUserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0"
+    //const fakeVersion = fakeUserAgent.substring(8);
+  const fakeVersion = "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0"
 
 
   //The majority of the implemented functions are easy to obfuscate with each of them being properties of window.navigator. 
