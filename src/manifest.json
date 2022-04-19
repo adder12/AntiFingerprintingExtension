@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Anti Fingerprint Extension",
   "description": "A proof of concept for a user friendly, Javascript based, chrome extension designed to help prevent browser fingerprinting",
-  "version": "0.1",
+  "version": "0.3",
   "author": "Ryan Garrett",
   "icons": {
     "128": "icon.png"

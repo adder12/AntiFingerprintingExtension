@@ -44,21 +44,5 @@
       return fakeUserAgent;
     });
     
-    scope.Object.defineProperty(window.screen, "width", {
-      enumerable: true,
-      configurable: true,
-      get: function() {
-          return 1366;
-      }
-  });
-  scope.Object.defineProperty(window.screen, "height", {
-      enumerable: true,
-      configurable: true,
-      get: function() {
-          return 768;
-      }
-  });
-
-
-
+   
   })();
