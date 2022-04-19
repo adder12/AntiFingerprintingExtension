@@ -12,7 +12,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
         const originalUserAgent = details.requestHeaders[i].value;
         const fakeUserAgent = originalUserAgent.replace(
           /\(.*?(?=(; rv:[^\)]+)?\))/,
-          "(Windows NT 10.0; Win64; x64"
+          "(Windows NT 6.1; Win64; x64"
         );
         details.requestHeaders[i].value = fakeUserAgent;
       } else if (details.requestHeaders[i].name === "Accept-Language") {
