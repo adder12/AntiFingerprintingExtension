@@ -7,7 +7,7 @@
       /\(.*?(?=(; rv:[^\)]+)?\))/,
       "(Windows NT 10.0; Win64; x64"
     );
-    const fakeVersion = fakeUserAgent.substr(8);
+    const fakeVersion = fakeUserAgent.substring(8);
   
     window.navigator.__defineGetter__("appVersion", function () {
       return fakeVersion;
@@ -43,4 +43,22 @@
     window.navigator.__defineGetter__("userAgent", function () {
       return fakeUserAgent;
     });
+    
+    scope.Object.defineProperty(window.screen, "width", {
+      enumerable: true,
+      configurable: true,
+      get: function() {
+          return 1366;
+      }
+  });
+  scope.Object.defineProperty(window.screen, "height", {
+      enumerable: true,
+      configurable: true,
+      get: function() {
+          return 768;
+      }
+  });
+
+
+
   })();
