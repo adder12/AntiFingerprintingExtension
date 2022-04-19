@@ -2,14 +2,17 @@
 (function () {
     "use strict";
   
-    const originalUserAgent = window.navigator.userAgent;
+    const originalUserAgent = window.navigator.userAgent; //this part of the function replaces the original user string with a fake user string
     const fakeUserAgent = originalUserAgent.replace(
       /\(.*?(?=(; rv:[^\)]+)?\))/,
       "(Windows NT 10.0; Win64; x64"
     );
     const fakeVersion = fakeUserAgent.substring(8);
   
-    window.navigator.__defineGetter__("appVersion", function () {
+
+
+  //The majority of the implemented functions are easy to obfuscate with each of them being properties of window.navigator. 
+    window.navigator.__defineGetter__("appVersion", function () { //each section defines a getter method for each property, meaning that when the fingerprinter requests the associated property, the values spoofed by the extension are sent as opposed to the real version
       return fakeVersion;
     });
     window.navigator.__defineGetter__("language", function () {
@@ -44,9 +47,14 @@
       return fakeUserAgent;
     });
 
-    window.navigator.__defineGetter__("deviceMemory", function () {
+    window.navigator.__defineGetter__("cookieEnabled", function () {
       return false;
 
+
+    });
+
+    window.navigator.__defineGetter__("deviceMemory", function () {
+      return 12;
 
     });
 
