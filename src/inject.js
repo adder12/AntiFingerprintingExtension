@@ -5,7 +5,7 @@
     const originalUserAgent = window.navigator.userAgent; //this part of the function replaces the original user string with a fake user string
     const fakeUserAgent = originalUserAgent.replace(
       /\(.*?(?=(; rv:[^\)]+)?\))/,
-      "(Windows NT 10.0; Win64; x64"
+      "(Windows NT 12.0; Win64; x64"
     );
     const fakeVersion = fakeUserAgent.substring(8);
   
@@ -48,7 +48,7 @@
     });
 
     window.navigator.__defineGetter__("cookieEnabled", function () {
-      return false;
+      return False;
 
 
     });
