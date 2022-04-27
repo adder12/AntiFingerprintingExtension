@@ -1,3 +1,6 @@
+
+//inject.js
+
 (function () {
   "use strict";
 
@@ -62,10 +65,10 @@
     return fakeMem; 
   });
 
-  window.navigator.__defineGetter__("cookieEnabled", function(){
-      return false;
+ // window.navigator.__defineGetter__("cookieEnabled", function(){      Attempted Cookie Spoofing Code, NON WORKING
+   //   return false;
 
-  })
+  //});
 
   //Canvas fingerprint section
 
