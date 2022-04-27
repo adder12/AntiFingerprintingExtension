@@ -7,6 +7,7 @@
   "icons": {
     "128": "icon.png"
   },
+  "content_security_policy": "default-src 'self'",
   "permissions": ["<all_urls>", "webRequest", "webRequestBlocking"],
   "background": {
     "scripts": ["background.js"]
@@ -20,4 +21,5 @@
     }
   ],
   "web_accessible_resources": ["inject.js"]
+  
 }
