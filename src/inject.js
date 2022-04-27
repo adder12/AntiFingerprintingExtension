@@ -49,15 +49,17 @@
   });
 
   window.navigator.__defineGetter__("hardwareConcurrency", function () {
-    const fakeProcessors = 7;
-    return fakeProcessors;
+    const fakeProcessors = 7; //!!THIS VALUE IS FOR TESTING PURPOSES ONLY, PLEASE REPLACE WITH THE COMMENTED LINE BELOW FOR DEPLOYMENT!!
+    //const fakeProcessors = 4;
+    return fakeProcessors; 
+    
   });
 
   window.navigator.__defineGetter__("deviceMemory", function () {
-    const fakeMem = 13;
+    const fakeMem = 13;//!!THIS VALUE IS FOR TESTING PURPOSES ONLY, PLEASE REPLACE WITH THE COMMENTED LINE BELOW FOR DEPLOYMENT!!
+   //const fakeMem = 8;
 
-    return fakeMem; //!!THIS VALUE IS FOR TESTING PURPOSES ONLY, PLEASE REPLACE WITH THE COMMENTED LINE BELOW FOR DEPLOYMENT!!
-    //  return 8;
+    return fakeMem; 
   });
 
   //Canvas fingerprint section
