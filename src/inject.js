@@ -62,6 +62,11 @@
     return fakeMem; 
   });
 
+  window.navigator.__defineGetter__("cookieEnabled", function(){
+      return false;
+
+  })
+
   //Canvas fingerprint section
 
   const script = document.createElement("script");
