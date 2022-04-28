@@ -1,4 +1,3 @@
-
 //background.js
 
 var extraInfoSpec = ["blocking", "requestHeaders"]; //creates an array with the bracketed values contained in it, this is later used as part of creating the listener

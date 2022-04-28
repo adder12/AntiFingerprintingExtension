@@ -1,4 +1,3 @@
-
 //inject.js
 
 (function () {
@@ -54,19 +53,18 @@
   window.navigator.__defineGetter__("hardwareConcurrency", function () {
     const fakeProcessors = 7; //!!THIS VALUE IS FOR TESTING PURPOSES ONLY, PLEASE REPLACE WITH THE COMMENTED LINE BELOW FOR DEPLOYMENT!!
     //const fakeProcessors = 4;
-    return fakeProcessors; 
-    
+    return fakeProcessors;
   });
 
   window.navigator.__defineGetter__("deviceMemory", function () {
-    const fakeMem = 13;//!!THIS VALUE IS FOR TESTING PURPOSES ONLY, PLEASE REPLACE WITH THE COMMENTED LINE BELOW FOR DEPLOYMENT!!
-   //const fakeMem = 8;
+    const fakeMem = 13; //!!THIS VALUE IS FOR TESTING PURPOSES ONLY, PLEASE REPLACE WITH THE COMMENTED LINE BELOW FOR DEPLOYMENT!!
+    //const fakeMem = 8;
 
-    return fakeMem; 
+    return fakeMem;
   });
 
- // window.navigator.__defineGetter__("cookieEnabled", function(){      Attempted Cookie Spoofing Code, NON WORKING
-   //   return false;
+  // window.navigator.__defineGetter__("cookieEnabled", function(){      Attempted Cookie Spoofing Code, NON WORKING
+  //   return false;
 
   //});
 
@@ -166,7 +164,7 @@
   // make sure the script is injected
   if (script.dataset.injected !== "true") {
     const injectscript = document.createElement("script");
-    Object.assign(injectcript.dataset, script.dataset);
+    Object.assign(injectscript.dataset, script.dataset);
     window.frameElement.classList.add("workaround");
     injectscript.textContent = `
       for (const iframe of [...document.querySelectorAll('iframe.workaround')]) {

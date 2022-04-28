@@ -1,4 +1,3 @@
-
 //content.js
 
 var script = document.createElement("script"); //creates a new script object
