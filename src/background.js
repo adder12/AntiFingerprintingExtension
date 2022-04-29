@@ -17,8 +17,8 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
         const fakeUserAgent = UserAgent.replace(
           //creates a second constant that is based on a modified version of the original user agent
           /\(.*?(?=(; rv:[^\)]+)?\))/,
-          "(Windows NT 6.1; Win64; x64" //!!THIS VALUE IS FOR TESTING PURPOSES ONLY, PLEASE REPLACE WITH THE COMMENTED LINE BELOW FOR DEPLOYMENT PURPOSES!!
-          //        "(Windows NT 10.0; Win64; x64"
+          //"(Windows NT 6.1; Win64; x64" //!!THIS VALUE IS FOR TESTING PURPOSES ONLY, PLEASE REPLACE WITH THE COMMENTED LINE BELOW FOR DEPLOYMENT PURPOSES!!
+                  "(Windows NT 10.0; Win64; x64"
         );
         details.requestHeaders[i].value = fakeUserAgent; //replaces the useragent with the newly created fake user agent
       } else if (details.requestHeaders[i].name === "Accept-Language") {
